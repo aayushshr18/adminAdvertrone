@@ -1,0 +1,55 @@
+.departments-page{
+    margin-left: 105px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.departments-container{
+}
+.departments-small-box{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.departments-small-box1{
+    margin-top: 100px;
+
+}
+
+.button{
+    margin-top: 35px;
+    margin-left: 50px;
+    background-color: aquamarine;
+    width: 70px;
+    height: 30px;
+}
+.depart{
+
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% of the viewport height */
+    background: rgba(255, 255, 255, 0.9); /* White with some transparency */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+.depart table {
+    
+    
+}
+
+table ,th ,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    
+}

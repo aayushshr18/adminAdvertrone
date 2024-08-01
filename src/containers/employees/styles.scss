@@ -1,0 +1,39 @@
+.employees-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .employees-container{
+        width: 100%;
+        margin: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .employees-page{
+        .employees-container{
+            margin: 3rem 0;
+        }
+    }
+}
+
+/* employees container css*/
+
+.employees-box{
+    width: 700px;
+    height: 600px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 80px;
+
+}
+.box-people{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.employees-button{
+    margin-top: 50px;
+    margin-left: 30px;
+
+}

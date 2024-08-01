@@ -1,0 +1,37 @@
+{
+  "metaData": {
+    "title": "Login"
+  },
+  "topSection": {
+    "title": "Admin Sign In"
+  },
+  "formSection": {
+    "inputComponents": [
+      {
+        "component": "email",
+        "details": {
+          "label": "Email Address",
+          "placeholder": "E.g. xyz@gmail.com"
+        }
+      },
+      {
+        "component": "password",
+        "details": {
+          "label": "Password",
+          "placeholder": "********"
+        }
+      },
+      {
+        "component": "button",
+        "details": {
+          "text": "Login",
+          "type": "submit",
+          "button": "primary"
+        }
+      }
+    ],
+    "bottomText": "Not a member?",
+    "linkText": "Create Account",
+    "signUpLink": "/signup"
+  }
+}
