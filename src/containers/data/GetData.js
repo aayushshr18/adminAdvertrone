@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import { fetchUrl } from "../../utils/fetchUrl";
+import moment from "moment/moment";
 
 const GetData = () => {
   const [bulkData, setBulkData] = useState([]);
@@ -147,6 +148,9 @@ const GetData = () => {
                 <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
                   Agent Code
                 </th>
+                <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
+                  Date
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -158,6 +162,7 @@ const GetData = () => {
                     {entry.flag ? "Done" : "Pending"}
                   </td>
                   <td style={{ padding: "10px" }}>{entry.agentCode}</td>
+                  <td style={{ padding: "10px" }}>{moment(entry.createdAt).format('DD-MM-YYYY')}</td>
                 </tr>
               ))}
             </tbody>
