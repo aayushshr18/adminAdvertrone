@@ -53,9 +53,9 @@ export const mapNavbarData = (data)=>{
                 id: 'navitem-7'
             },
             {
-                to: '/createdata',
+                to: '/form',
                 paths: ['createdata'],
-                title: 'Create Bulk Data',
+                title: 'Form Entries',
                 icon: 'cdata_icon',
                 id: 'navitem-8'
             },{

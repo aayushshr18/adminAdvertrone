@@ -17,6 +17,7 @@ import CreateData from "../data/CreateData";
 import GetData from "../data/GetData";
 import Requests from "../teamLead/Requests";
 import AddAmount from "../teamLead/AddAmount";
+import Form from "../form/Form";
 
 export const allRoutes = [
   {
@@ -72,8 +73,8 @@ export const allRoutes = [
     element: <Balance />,
   },
   {
-    path: "/createdata",
-    element: <CreateData />,
+    path: "/form",
+    element: <Form />,
   },
   {
     path: "/*",
