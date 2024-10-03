@@ -228,7 +228,7 @@ const Projects = () => {
           name="agent_code"
           value={newEmployee.agent_code}
           onChange={handleInputChange}
-          placeholder="Agent Code"
+          placeholder="Employee Id"
         />
         <input
           type="text"
@@ -255,7 +255,7 @@ const Projects = () => {
               <StyledTableCell>Balance</StyledTableCell>
               <StyledTableCell>UPI ID</StyledTableCell>
               <StyledTableCell>Account Status</StyledTableCell>
-              <StyledTableCell>Agent Code</StyledTableCell>
+              <StyledTableCell>Employee Id</StyledTableCell>
               <StyledTableCell>Actions</StyledTableCell>
               <StyledTableCell>Approve Status</StyledTableCell>
             </TableRow>

@@ -143,7 +143,7 @@ const Task = () => {
             <Table className="tablea">
               <TableHead style={{ background: "#2A2185" }}>
                 <TableRow>
-                  <TableCell style={{ color: "yellow" }}>Agent Code</TableCell>
+                  <TableCell style={{ color: "yellow" }}>Employee Id</TableCell>
                   <TableCell style={{ color: "yellow" }}>Name</TableCell>
                   <TableCell style={{ color: "yellow" }}>
                     Account Number

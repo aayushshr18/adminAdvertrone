@@ -170,7 +170,7 @@ const Departments = () => {
         <TextField
           // {...props}
           style={{ width: "100%" }}
-          placeholder="Enter company name or agent code"
+          placeholder="Enter company name or Employee Id"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           InputProps={{

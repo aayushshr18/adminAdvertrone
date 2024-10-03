@@ -187,7 +187,7 @@ const Balance = () => {
           <TextField
             // {...props}
             style={{ width: "100%" }}
-            placeholder="Enter Agent Code"
+            placeholder="Enter Employee Id"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             InputProps={{

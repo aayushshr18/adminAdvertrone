@@ -47,7 +47,7 @@ const Requests = () => {
 
   return (
     <div style={{ margin: "20px", padding: "100px" }}>
-      <h2>Requests</h2>
+      <h2>Team Leader Withdrawal Requests</h2>
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
           <tr>
