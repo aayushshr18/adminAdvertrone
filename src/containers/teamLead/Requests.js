@@ -6,7 +6,7 @@ const Requests = () => {
   const [requestsPerPage] = useState(10);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BASE_URI}/api/teamleader/requests`)
+    fetch(`${process.env.REACT_APP_BASE_URI_FAD}/api/teamleader/requests`)
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -20,7 +20,7 @@ const Requests = () => {
 
   const changeStatus = (id, newStatus) => {
     fetch(
-      `${process.env.REACT_APP_BASE_URI}/api/teamleader/request?id=${id}&status=${newStatus}`,
+      `${process.env.REACT_APP_BASE_URI_FAD}/api/teamleader/request?id=${id}&status=${newStatus}`,
       {
         method: "PATCH",
       }

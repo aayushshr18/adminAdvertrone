@@ -1,7 +1,7 @@
 import { fetchUrl } from "../../utils/fetchUrl";
 
 export const getAllDashboardData = async () => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/dashboard`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/dashboard`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -10,7 +10,7 @@ export const getAllDashboardData = async () => {
 };
 
 export const updateTransactionStatus = async (transactionId, newStatus) => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/transaction/admin/withdraw/${transactionId}`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/transaction/admin/withdraw/${transactionId}`;
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -26,7 +26,7 @@ export const updateTransactionStatus = async (transactionId, newStatus) => {
 };
 
 export const getAllWithdrawnRequests = async () => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/transaction/admin/withdraw`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/transaction/admin/withdraw`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -35,7 +35,7 @@ export const getAllWithdrawnRequests = async () => {
 };
 
 export const deleteTransaction = async (transactionId) => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/transaction/admin/withdraw/${transactionId}`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/transaction/admin/withdraw/${transactionId}`;
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");

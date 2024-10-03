@@ -3,7 +3,7 @@ import { getLocalStorageKey } from "../../utils/localStorage";
 
 export const getEmployeeDetails = async () => {
   const url =
-    process.env.REACT_APP_BASE_URI + "/api/v1/employees/employeeDetails";
+    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/employeeDetails";
   const token = getLocalStorageKey("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -14,7 +14,7 @@ export const getEmployeeDetails = async () => {
 
 export const getEmployeeDetailsById = async (id) => {
   const url =
-    process.env.REACT_APP_BASE_URI + "/api/v1/employees/employeeDetails";
+    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/employeeDetails";
   const token = getLocalStorageKey("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -26,7 +26,7 @@ export const getEmployeeDetailsById = async (id) => {
 
 export const updateEmployeeDetails = async (id, details) => {
   const url =
-    process.env.REACT_APP_BASE_URI + "/api/v1/employees/updateEmployee";
+    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/updateEmployee";
   const token = getLocalStorageKey("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -46,7 +46,7 @@ export const updateEmployeeDetails = async (id, details) => {
 
 export const deleteEmployee = async (id) => {
   const url =
-    process.env.REACT_APP_BASE_URI + "/api/v1/employees/deleteEmployee";
+    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/deleteEmployee";
   const token = getLocalStorageKey("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -58,7 +58,7 @@ export const deleteEmployee = async (id) => {
 
 export const deleteAssignment = async (id) => {
   const url =
-    process.env.REACT_APP_BASE_URI + "/api/admin/assignment/";
+    process.env.REACT_APP_BASE_URI_FAD + "/api/admin/assignment/";
   const token = getLocalStorageKey("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -69,7 +69,7 @@ export const deleteAssignment = async (id) => {
 };
 
 export const getAllLeads = async (employee_id) => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/employee/leads?employee_id=${employee_id}`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/employee/leads?employee_id=${employee_id}`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 

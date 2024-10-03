@@ -16,7 +16,7 @@ const GetData = () => {
     setLoading(true);
     setError(null);
     try {
-      const url = process.env.REACT_APP_BASE_URI + "/api/admin/bulk-data";
+      const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/bulk-data";
       const headers = new Headers();
       headers.append("Content-Type", "application/json");
       const requestOptions = {

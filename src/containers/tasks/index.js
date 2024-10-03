@@ -103,7 +103,7 @@ const Task = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: `${process.env.REACT_APP_BASE_URI}/api/admin/amtaccesspasscode`,
+      url: `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/amtaccesspasscode`,
       headers: {
         "Content-Type": "application/json",
       },

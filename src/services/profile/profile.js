@@ -1,7 +1,7 @@
 import { fetchUrl } from "../../utils/fetchUrl";
 
 export const addNotice = async (noticeData) => {
-  const url = process.env.REACT_APP_BASE_URI + "/api/admin/notice";
+  const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/notice";
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -17,7 +17,7 @@ export const addNotice = async (noticeData) => {
 };
 
 export const deleteNotice = async (noticeId) => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/notice/${noticeId}`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/notice/${noticeId}`;
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -33,7 +33,7 @@ export const deleteNotice = async (noticeId) => {
 };
 
 export const getNotices = async () => {
-  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/notices`;
+  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/notices`;
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
