@@ -9,7 +9,7 @@ const AddAmount = () => {
   const [leadersPerPage] = useState(10);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BASE_URI}/api/teamleader/all`)
+    fetch(`${process.env.REACT_APP_BASE_URI_FAD}/api/teamleader/all`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched data:", data);
@@ -24,7 +24,7 @@ const AddAmount = () => {
   const handleAddAmount = (e) => {
     e.preventDefault();
     fetch(
-      `${process.env.REACT_APP_BASE_URI}/api/admin/addAmtTeamlead?email=${email}&amt=${amount}`,
+      `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/addAmtTeamlead?email=${email}&amt=${amount}`,
       {
         method: "PATCH",
       }

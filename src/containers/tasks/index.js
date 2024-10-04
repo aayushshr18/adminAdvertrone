@@ -103,7 +103,7 @@ const Task = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: `${process.env.REACT_APP_BASE_URI}/api/admin/amtaccesspasscode`,
+      url: `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/amtaccesspasscode`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -143,7 +143,7 @@ const Task = () => {
             <Table className="tablea">
               <TableHead style={{ background: "#2A2185" }}>
                 <TableRow>
-                  <TableCell style={{ color: "yellow" }}>Agent Code</TableCell>
+                  <TableCell style={{ color: "yellow" }}>Employee Id</TableCell>
                   <TableCell style={{ color: "yellow" }}>Name</TableCell>
                   <TableCell style={{ color: "yellow" }}>
                     Account Number

@@ -148,7 +148,7 @@ const Balance = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: `${process.env.REACT_APP_BASE_URI}/api/admin/amtaccesspasscode`,
+      url: `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/amtaccesspasscode`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -187,7 +187,7 @@ const Balance = () => {
           <TextField
             // {...props}
             style={{ width: "100%" }}
-            placeholder="Enter Agent Code"
+            placeholder="Enter Employee Id"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             InputProps={{

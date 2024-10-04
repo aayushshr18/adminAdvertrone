@@ -16,7 +16,7 @@ const GetData = () => {
     setLoading(true);
     setError(null);
     try {
-      const url = process.env.REACT_APP_BASE_URI + "/api/admin/bulk-data";
+      const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/bulk-data";
       const headers = new Headers();
       headers.append("Content-Type", "application/json");
       const requestOptions = {
@@ -146,7 +146,7 @@ const GetData = () => {
                   Status
                 </th>
                 <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
-                  Agent Code
+                  Employee Id
                 </th>
                 <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
                   Date

@@ -47,7 +47,7 @@ const CreateData = () => {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_BASE_URI}/api/admin/bulk-data`,
+        `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/bulk-data`,
         {
           method: "POST",
           headers: {
