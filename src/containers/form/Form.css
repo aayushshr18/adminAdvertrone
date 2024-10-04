@@ -1,0 +1,56 @@
+.admin-panel {
+    padding: 20px;
+    margin: 40px 120px;
+  }
+  
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .employee-table th, .employee-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  /* AdminPanel.css */
+.button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-container button {
+  background-color: #4CAF50; /* Green background */
+  color: white;               /* White text */
+  padding: 12px 24px;         /* Padding for size */
+  font-size: 16px;            /* Font size */
+  border: none;               /* No borders */
+  border-radius: 8px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button-container button:hover {
+  background-color: #45a049;  /* Darker green on hover */
+}
+
+.button-container button:active {
+  background-color: #3e8e41;  /* Even darker green when clicked */
+  transform: scale(0.98);     /* Slight shrink effect when clicked */
+}
+
+.button-container button:disabled {
+  background-color: #cccccc;  /* Disabled button color */
+  cursor: not-allowed;        /* Show 'not allowed' cursor when disabled */
+}
+
+  
