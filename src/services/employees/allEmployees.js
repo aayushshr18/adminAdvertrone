@@ -2,7 +2,7 @@ import { fetchUrl } from "../../utils/fetchUrl";
 import { getLocalStorageKey } from "../../utils/localStorage";
 
 export const getAllAssignments = async () => {
-  const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/assignments";
+  const url = process.env.REACT_APP_BASE_URI + "/api/admin/assignments";
   const token = getLocalStorageKey("token");
 
   const headers = new Headers();
@@ -15,7 +15,7 @@ export const getAllAssignments = async () => {
 };
 
 export const addAssignment = async (assignmentData) => {
-  const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/assignment";
+  const url = process.env.REACT_APP_BASE_URI + "/api/admin/assignment";
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -34,7 +34,7 @@ export const addAssignment = async (assignmentData) => {
 
 // Function to fetch all employees
 export const getAllEmployee = async () => {
-  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/employees`;
+  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/employees`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -49,7 +49,7 @@ export const getAllEmployee = async () => {
 
 // Function to add a new employee
 export const addEmployee = async (newEmployee) => {
-  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/employee`;
+  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/employee`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -65,7 +65,7 @@ export const addEmployee = async (newEmployee) => {
 
 // Function to update an existing employee
 export const updateEmployee = async (employeeId, updatedEmployeeData) => {
-  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/employee/${employeeId}`;
+  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/employee/${employeeId}`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -81,7 +81,7 @@ export const updateEmployee = async (employeeId, updatedEmployeeData) => {
 
 // Function to delete an employee
 export const deleteEmployee = async (employeeId) => {
-  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/employee/${employeeId}`;
+  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/employee/${employeeId}`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -97,7 +97,7 @@ export const deleteEmployee = async (employeeId) => {
 ////////////////ended here/////////////////////////////
 
 export const getAllEmployees = async () => {
-  const url = process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/allEmployees";
+  const url = process.env.REACT_APP_BASE_URI + "/api/v1/employees/allEmployees";
   const token = getLocalStorageKey("token");
 
   const headers = new Headers();
@@ -111,7 +111,7 @@ export const getAllEmployees = async () => {
 
 export const getEmployeesCount = async () => {
   const url =
-    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/employees/employees-count";
+    process.env.REACT_APP_BASE_URI + "/api/v1/employees/employees-count";
   const token = getLocalStorageKey("token");
 
   const headers = new Headers();

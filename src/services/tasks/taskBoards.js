@@ -3,7 +3,7 @@ import { fetchUrl } from '../../utils/fetchUrl';
 
 export const getAllBoards = async () => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/task-board/boards';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/task-board/boards';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -15,7 +15,7 @@ export const getAllBoards = async () => {
 
 export const createBoard = async (details) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/task-board/boards';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/task-board/boards';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -27,7 +27,7 @@ export const createBoard = async (details) => {
 
 export const getBoardById = async (id) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/task-board/boards';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/task-board/boards';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -41,7 +41,7 @@ export const getBoardById = async (id) => {
 
 export const deleteBoardById = async (id) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/task-board/boards';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/task-board/boards';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -55,7 +55,7 @@ export const deleteBoardById = async (id) => {
 
 export const updateBoardById = async (id, details) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/task-board/boards';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/task-board/boards';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');

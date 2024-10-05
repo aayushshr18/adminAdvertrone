@@ -3,7 +3,7 @@ import { fetchUrl } from '../../utils/fetchUrl';
 
 export const createTask = async (boardId, columnId, task) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/tasks/create-task';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/tasks/create-task';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -16,7 +16,7 @@ export const createTask = async (boardId, columnId, task) => {
 
 export const updateTask = async (boardId, taskId, columnId, task) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/tasks/update-task';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/tasks/update-task';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -29,7 +29,7 @@ export const updateTask = async (boardId, taskId, columnId, task) => {
 
 export const dragTaskToNewCol = async (boardId, taskId, { prevColId, colId }) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/tasks/update-task';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/tasks/update-task';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');
@@ -43,7 +43,7 @@ export const dragTaskToNewCol = async (boardId, taskId, { prevColId, colId }) =>
 
 export const deleteTask = async (boardId, taskId) => {
   const token = getLocalStorageKey('token');
-  const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/tasks/delete-task';
+  const url = process.env.REACT_APP_BASE_URI + '/api/v1/tasks/delete-task';
 
   const headers = new Headers();
   headers.append('Content-Type','application/json');

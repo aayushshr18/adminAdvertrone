@@ -2,7 +2,7 @@ import { fetchUrl } from "../../utils/fetchUrl";
 import { getLocalStorageKey } from "../../utils/localStorage";
 
 export const getAllleads = async () => {
-  const url = process.env.REACT_APP_BASE_URI_FAD + "/api/admin/leads";
+  const url = process.env.REACT_APP_BASE_URI + "/api/admin/leads";
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
@@ -11,7 +11,7 @@ export const getAllleads = async () => {
 };
 
 export const updateLead = async (updatedDetails) => {
-  const url = `${process.env.REACT_APP_BASE_URI_FAD}/api/admin/lead/${updatedDetails._id}`;
+  const url = `${process.env.REACT_APP_BASE_URI}/api/admin/lead/${updatedDetails._id}`;
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
   console.log(updatedDetails);
@@ -28,7 +28,7 @@ export const updateLead = async (updatedDetails) => {
 export const getAllDepartments = async () => {
   const token = getLocalStorageKey("token");
   const url =
-    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/departments/all-departments";
+    process.env.REACT_APP_BASE_URI + "/api/v1/departments/all-departments";
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -41,7 +41,7 @@ export const getAllDepartments = async () => {
 export const getDepartmentsCount = async () => {
   const token = getLocalStorageKey("token");
   const url =
-    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/departments/department-count";
+    process.env.REACT_APP_BASE_URI + "/api/v1/departments/department-count";
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
@@ -54,7 +54,7 @@ export const getDepartmentsCount = async () => {
 export const createDepartment = async (details) => {
   const token = getLocalStorageKey("token");
   const url =
-    process.env.REACT_APP_BASE_URI_FAD + "/api/v1/departments/create-department";
+    process.env.REACT_APP_BASE_URI + "/api/v1/departments/create-department";
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
