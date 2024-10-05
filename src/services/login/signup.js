@@ -1,7 +1,7 @@
 import { fetchUrl } from "../../utils/fetchUrl";
 
 export const signup = async (id, otp) =>{
-    const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/employees/signup';
+    const url = process.env.REACT_APP_BASE_URI + '/api/v1/employees/signup';
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     const body = { id, otp };
@@ -10,7 +10,7 @@ export const signup = async (id, otp) =>{
 }
 
 export const preSignup = async (name, email, password) =>{
-    const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/employees/signup/send-otp';
+    const url = process.env.REACT_APP_BASE_URI + '/api/v1/employees/signup/send-otp';
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     const body = { name, email, password };
@@ -19,7 +19,7 @@ export const preSignup = async (name, email, password) =>{
 }
 
 export const preSignupResendOTP = async (id) =>{
-    const url = process.env.REACT_APP_BASE_URI_FAD + '/api/v1/employees/signup/resend-otp/';
+    const url = process.env.REACT_APP_BASE_URI + '/api/v1/employees/signup/resend-otp/';
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     
