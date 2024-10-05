@@ -13,7 +13,7 @@ const AdminPanel = () => {
     const fetchEmployeeEntries = async () => {
       setIsLoading(true);
       try {
-        const url = process.env.REACT_APP_BASE_URI + '/api/admin/form'; // Assuming this is your API endpoint
+        const url = process.env.REACT_APP_BASE_URI + '/api/admin/form/'; // Assuming this is your API endpoint
         const response = await fetch(url, {
           method: 'GET', // Use GET instead of POST
           headers: {
@@ -27,7 +27,7 @@ const AdminPanel = () => {
         }
 
         const data = await response.json(); // Parse the response as JSON
-        setEmployeeEntries(data.forms);           // Assuming the data is in the expected format
+        setEmployeeEntries(data.forms); // Assuming the data is in the expected format
 
       } catch (error) {
         setError("Error fetching employee entries.");
@@ -57,6 +57,14 @@ const AdminPanel = () => {
       State: entry.state,
       PinCode: entry.pinCode,
       WebCenterTimeDetails: entry.webCenterTimeDetails.map(row => row.join(", ")).join("; "), // Flattening the array for Excel
+      PayCode: entry.payDetails?.payCode || "",
+      RegHrs: entry.payDetails?.regHrs || "",
+      OTHrs: entry.payDetails?.otHrs || "",
+      DHrs: entry.payDetails?.dHrs || "",
+      BillRate: entry.payDetails?.billRate || "",
+      OTBillRate: entry.payDetails?.otBillRate || "",
+      DBillRate: entry.payDetails?.dBillRate || "",
+      Total: entry.payDetails?.total || "",
     }));
 
     const ws = XLSX.utils.json_to_sheet(data); // Convert data to Excel sheet
@@ -90,6 +98,7 @@ const AdminPanel = () => {
                 <th>State</th>
                 <th>Pin Code</th>
                 <th>WebCenter Time Details</th>
+                <th>Pay Details</th>
               </tr>
             </thead>
             <tbody>
@@ -106,9 +115,40 @@ const AdminPanel = () => {
                   <td>{entry.city}</td>
                   <td>{entry.state}</td>
                   <td>{entry.pinCode}</td>
-                  <td>{entry.webCenterTimeDetails.map((row, i) => (
-                    <div key={i}>{row.join(", ")}</div> // Display time details row-wise
-                  ))}</td>
+                  <td>
+                    {entry.webCenterTimeDetails.map((row, i) => (
+                      <div key={i}>{row.join(", ")}</div>
+                    ))}
+                  </td>
+                  <td>
+                    {/* Display Pay Details */}
+                    <table className="pay-details-table-admin">
+                      <thead>
+                        <tr>
+                          <th>Pay Code</th>
+                          <th>Reg Hrs</th>
+                          <th>OT Hrs</th>
+                          <th>D Hrs</th>
+                          <th>Bill Rate</th>
+                          <th>OT Bill Rate</th>
+                          <th>D Bill Rate</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{entry.payDetails?.payCode || "-"}</td>
+                          <td>{entry.payDetails?.regHrs || "-"}</td>
+                          <td>{entry.payDetails?.otHrs || "-"}</td>
+                          <td>{entry.payDetails?.dHrs || "-"}</td>
+                          <td>{entry.payDetails?.billRate || "-"}</td>
+                          <td>{entry.payDetails?.otBillRate || "-"}</td>
+                          <td>{entry.payDetails?.dBillRate || "-"}</td>
+                          <td>{entry.payDetails?.total || "-"}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
                 </tr>
               ))}
             </tbody>
