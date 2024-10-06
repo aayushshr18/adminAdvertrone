@@ -187,7 +187,7 @@ const Balance = () => {
           <TextField
             // {...props}
             style={{ width: "100%" }}
-            placeholder="Enter Agent Code"
+            placeholder="Enter Customer ID"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             InputProps={{
@@ -211,7 +211,7 @@ const Balance = () => {
             <Table style={{ borderRadius: "20px" }}>
               <TableHead>
                 <TableRow>
-                  <StyledTableCell>AGENT_CODE</StyledTableCell>
+                  <StyledTableCell>CUSTOMER_ID</StyledTableCell>
                   <StyledTableCell>ADD_BALANCE</StyledTableCell>
                   <StyledTableCell>UPDATE</StyledTableCell>
                 </TableRow>

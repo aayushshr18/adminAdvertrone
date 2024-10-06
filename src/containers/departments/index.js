@@ -170,7 +170,7 @@ const Departments = () => {
         <TextField
           // {...props}
           style={{ width: "100%" }}
-          placeholder="Enter company name or agent code"
+          placeholder="Enter company name or Customer ID"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           InputProps={{
@@ -209,7 +209,7 @@ const Departments = () => {
           <TableHead>
             <TableRow>
               <StyledTableCell>REFER_BY</StyledTableCell>
-              <StyledTableCell>AGENT_CODE</StyledTableCell>
+              <StyledTableCell>CUSTOMER_ID</StyledTableCell>
               <StyledTableCell>COMPANY_NAME</StyledTableCell>
               <StyledTableCell>NAME</StyledTableCell>
               <StyledTableCell>NUMBER</StyledTableCell>

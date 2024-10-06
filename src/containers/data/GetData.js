@@ -146,7 +146,7 @@ const GetData = () => {
                   Status
                 </th>
                 <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
-                  Agent Code
+                  Customer ID
                 </th>
                 <th style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
                   Date
