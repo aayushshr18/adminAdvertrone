@@ -209,10 +209,10 @@ const Departments = () => {
           <TableHead>
             <TableRow>
               <StyledTableCell>REFER_BY</StyledTableCell>
-              <StyledTableCell>CUSTOMER_ID</StyledTableCell>
+              <StyledTableCell>NUMBER</StyledTableCell>
               <StyledTableCell>COMPANY_NAME</StyledTableCell>
               <StyledTableCell>NAME</StyledTableCell>
-              <StyledTableCell>NUMBER</StyledTableCell>
+              <StyledTableCell>URL</StyledTableCell>
               <StyledTableCell>STATUS</StyledTableCell>
               <StyledTableCell>DATE</StyledTableCell>
               <StyledTableCell>UPDATE</StyledTableCell>
